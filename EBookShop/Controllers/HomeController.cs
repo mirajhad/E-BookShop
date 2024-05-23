@@ -1,8 +1,8 @@
-using EBookShop.Models;
+using Bulky.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace EBookShop.Controllers
+namespace Bulky.Controllers
 {
     public class HomeController : Controller
     {

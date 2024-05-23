@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EBookShop.Models
+namespace Bulky.Models
 {
     public class Category
     {
@@ -16,7 +16,7 @@ namespace EBookShop.Models
         [DisplayName("Category Name")]
         public string Name { get; set; }
         [DisplayName("Display Order")]
-        [Range(1, 100, ErrorMessage ="Must be between 1 to 100")]
+        [Range(1, 100, ErrorMessage = "Must be between 1 to 100")]
         public int DisplayOrder { get; set; }
     }
 }

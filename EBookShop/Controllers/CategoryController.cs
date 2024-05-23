@@ -1,8 +1,9 @@
-﻿using EBookShop.Data;
-using EBookShop.Models;
+﻿
+using Bulky.DataAccess.Data;
+using Bulky.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EBookShop.Controllers
+namespace Bulky.Controllers
 {
     public class CategoryController : Controller
     {
