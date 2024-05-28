@@ -20,4 +20,8 @@
     <ProjectReference Include="..\Book.Models\Bulky.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>
