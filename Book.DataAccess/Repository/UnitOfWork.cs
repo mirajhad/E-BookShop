@@ -20,9 +20,6 @@ namespace Bulky.DataAccess.Repository
             Category = new CategoryRepository(_db);
             Product = new ProductRepository(_db);
         }
-
-
-
         public void Save()
         {
             _db.SaveChanges();
