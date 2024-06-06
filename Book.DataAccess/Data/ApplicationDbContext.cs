@@ -19,8 +19,9 @@ namespace Bulky.DataAccess.Data
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Company> Companies { get; set; }
         public virtual DbSet<ShoppingCart> ShoppingCarts { get; set; }
-
         public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public virtual DbSet<OrderHeader> OrderHeaders { get; set; }
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
