@@ -14,6 +14,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize]
+    [Authorize(Roles = SD.Role_Admin)]
     public class OrderController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
