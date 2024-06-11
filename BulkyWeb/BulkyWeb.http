@@ -1,0 +1,9 @@
+﻿@BulkyWeb_HostAddress = https://localhost:7001
+
+GET {{BulkyWeb_HostAddress}}/{area=Customer}/company/edit/{id}
+
+###
+
+GET {{BulkyWeb_HostAddress}}/{area=Customer}/cart/index/{id}
+
+###
