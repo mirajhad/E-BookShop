@@ -53,11 +53,24 @@ namespace BulkyWeb.Areas.Admin.Controllers
         }
 
 
-        [HttpDelete]
-        public IActionResult Delete(int? id)
+        [HttpPost]
+        public IActionResult LockUnlock([FromBody]string id)
         {
-
-            return Json(new { success = true, message = "Deleted Successful" });
+            var objFromDb = _db.ApplicationUsers.FirstOrDefault(u => u.Id == id);
+            if (objFromDb == null)
+            {
+                return Json(new { success = false, message = "Error while Locking/Unlocking" });
+            }
+            if (objFromDb.LockoutEnd != null && objFromDb.LockoutEnd > DateTime.Now)
+            {
+                objFromDb.LockoutEnd = DateTime.Now;
+            }
+            else
+            {
+                objFromDb.LockoutEnd = DateTime.Now.AddYears(100);
+            }
+            _db.SaveChanges();
+            return Json(new { success = true, message = "Operation Successful" });
         }
         #endregion
     }
