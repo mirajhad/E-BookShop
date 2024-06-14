@@ -71,8 +71,8 @@
                         <label asp-for="Input.ConfirmPassword">Confirm Password</label>
                         <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                     </div>
-                    @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee))
-                    {
+                    @* @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee))
+                    { *@
                         <div class="form-floating mb-3 col-md-6">
                             <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-select">
                                 <option disabled selected>--Select Role--</option>
@@ -83,7 +83,7 @@
                                 <option disabled selected>--Select Company--</option>
                             </select>
                         </div>
-                    }
+                    @* } *@
                     <div class="col-12">
                         <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
                     </div>
