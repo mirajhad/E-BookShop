@@ -1,2 +1,3 @@
 ## Login Details
-admin@gmail.com/Admin123*
+Email- admin@gmail.com
+Password- Admin123*
